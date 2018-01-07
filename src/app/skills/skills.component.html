@@ -1,0 +1,10 @@
+<h2>My Skills</h2>
+<mat-selection-list role="list">
+  <mat-card tabindex="0" role="listitem" *ngFor="let skill of skills" class="skill_item">
+    <mat-card-title>{{skill.name}}</mat-card-title>
+    <mat-card-content>
+      <mat-progress-bar mode="determinate" value="{{skill.level}}"></mat-progress-bar>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </mat-card-content>
+  </mat-card>
+</mat-selection-list>
